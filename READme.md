@@ -118,10 +118,10 @@ Each stage will document:
 PROJECT STATUS
 ------------------------------------------------------------
 
-Stage 01 - In Progress
-Stage 02 - Planned
-Stage 03 - Planned
-Stage 04 - Planned
-Stage 05 - Planned
-Stage 06 - Planned
+- Stage 01 - In Progress
+- Stage 02 - Planned
+- Stage 03 - Planned
+- Stage 04 - Planned
+- Stage 05 - Planned
+- Stage 06 - Planned
 
