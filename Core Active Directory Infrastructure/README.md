@@ -35,31 +35,31 @@ ENVIRONMENT
 - Primary Site: Calgary
 - Active Directory Domain: corp.kojayindustries.test
 - Network:
-- 10.10.10.0/24 \
+- 10.10.10.0/24 
   
-Systems: \
+Systems:  
 
 KI-CGY-DC01
 - Windows Server 2025
 - Primary Domain Controller
 - DNS Server
-- IP: 10.10.10.10 \
+- IP: 10.10.10.10 
 
 KI-CGY-DC02
 - Windows Server 2025
 - Additional Domain Controller
 - DNS Server
-- IP: 10.10.10.11 \
+- IP: 10.10.10.11 
 
 KI-CGY-LNX01
 - Ubuntu Server
 - Linux Infrastructure Server
-- IP: 10.10.10.20 \
+- IP: 10.10.10.20 
 
 KI-CGY-CL01
 - Windows 11 Pro
 - Domain Workstation
-- IP: 10.10.10.100 \
+- IP: 10.10.10.100 
 
 
 ------------------------------------------------------------
