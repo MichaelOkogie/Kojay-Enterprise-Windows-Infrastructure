@@ -4,28 +4,16 @@
 BUSINESS SCENARIO
 ------------------------------------------------------------
 
-Kojay Industries is establishing its first centralized IT
-infrastructure at its Calgary headquarters.
+Kojay Industries is establishing centralized identity services for the organization. 
 
-As the organization grows, it requires centralized user
-authentication, computer management, and internal name resolution. 
-Management also requires redundancy so that authentication and
-directory services remain available if one domain controller
-becomes unavailable.
+The company currently operates from Calgary but wants an Active Directory design that can support future expansion into additional locations.
 
 
 ------------------------------------------------------------
 OBJECTIVE
 ------------------------------------------------------------
 
-Deploy the initial Kojay Industries Active Directory environment
-using two Windows Server 2025 domain controllers, one Ubuntu Server,
-and one Windows 11 Pro workstation.
-
-This stage will establish the corporate domain, configure DNS,
-introduce domain controller redundancy, and verify that the first
-corporate workstation can successfully authenticate to the domain.
-
+Deploy the corporate Active Directory forest using a central corporate domain controller, then deploy a Calgary site domain controller to provide local authentication and DNS services for Calgary users.
 
 ------------------------------------------------------------
 ENVIRONMENT
@@ -68,8 +56,8 @@ NAMING CONVENTION
 
 The following naming structure is used throughout the environment: \
 
-KI-[SITE]-[ROLE][NUMBER]
-\
+KI-[SITE]-[ROLE][NUMBER]  
+
 Example:
 KI-CGY-DC01
 KI  = Kojay Industries
@@ -116,27 +104,28 @@ IMPLEMENTATION PLAN
 
 4. Assign static IP addresses to the servers.
 
-5. Install Active Directory Domain Services and DNS on KI-CGY-DC01.
+5. Install Active Directory Domain Services and DNS on
+   KI-CORP-DC01.
 
 6. Create the corp.kojayindustries.test forest and domain.
 
-7. Join KI-CGY-DC02 to the domain.
+7. Join KI-CGY-DC01 to corp.kojayindustries.test.
 
-8. Promote KI-CGY-DC02 as an additional domain controller and
-   DNS server.
+8. Promote KI-CGY-DC01 as an additional domain controller
+   and DNS server.
 
-9. Verify Active Directory replication between both domain
-   controllers.
+9. Verify Active Directory replication between
+   KI-CORP-DC01 and KI-CGY-DC01.
 
-10. Verify DNS resolution.
+10. Join KI-CGY-CL01 to the domain.
 
-11. Join KI-CGY-CL01 to the domain.
+11. Create a test domain user.
 
-12. Create a test domain user.
+12. Authenticate to KI-CGY-CL01 using the domain account.
 
-13. Sign in to KI-CGY-CL01 using the domain account.
+13. Verify DNS resolution and domain authentication.
 
-14. Verify domain authentication, DNS resolution, and replication.
+14. Verify the Calgary DC can service authentication requests.
 
 
 ------------------------------------------------------------
