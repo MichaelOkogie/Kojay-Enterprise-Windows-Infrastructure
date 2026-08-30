@@ -12,19 +12,18 @@ of a simulated enterprise Windows infrastructure environment for
 Kojay Industries.
 
 
-------------------------------------------------------------
-BUSINESS SCENARIO
-------------------------------------------------------------
+## BUSINESS SCENARIO
 
 Kojay Industries is a growing organization that requires a
 centralized IT infrastructure for user authentication, device
 management, internal name resolution, file access, and corporate
 policy enforcement.
 
-The environment will begin at the Calgary headquarters and will
-be expanded throughout the project as additional users, services,
-administrative requirements, and locations are introduced.
-
+The environment will begin with a central corporate Active Directory
+infrastructure and a Calgary site. As the organization grows, the
+environment will be expanded to support additional users, services,
+administrative requirements, and geographic locations such as
+Toronto and Edmonton.
 
 ------------------------------------------------------------
 PROJECT GOALS
@@ -38,26 +37,25 @@ PROJECT GOALS
 - Configure Group Policy
 - Deploy centralized file services
 - Manage NTFS and share permissions
-- Configure multi-site Active Directory
+- Design and administer multi-site Active Directory infrastructure
 - Implement delegated administration and least privilege
 - Configure backup and recovery
 - Integrate Linux infrastructure
 - Implement infrastructure monitoring
 
 
-------------------------------------------------------------
-INITIAL ENVIRONMENT
-------------------------------------------------------------
+## INITIAL ENVIRONMENT
 
 Company: Kojay Industries
 Active Directory Domain: corp.kojayindustries.test
-Primary Site: Calgary
+Initial Site: Calgary
 Network: 10.10.10.0/24
-Systems: 
-KI-CGY-DC01 - Windows Server 2025, Primary Domain Controller / DNS
-KI-CGY-DC02 - Windows Server 2025, Additional Domain Controller / DNS
-KI-CGY-LNX01 - Ubuntu Server, Linux Infrastructure Server
-KI-CGY-CL01 - Windows 11 Pro Domain Workstation
+
+Systems:
+KI-CORP-DC01 - Windows Server 2025, Initial Corporate Domain Controller / DNS
+KI-CGY-DC01 - Windows Server 2025, Calgary Site Domain Controller / DNS
+KI-CGY-LNX01 - CentOS 10, Linux Infrastructure Server
+KI-CGY-CL01 - Windows 11 Pro, Calgary Domain Workstation
 
 
 ------------------------------------------------------------
@@ -84,7 +82,7 @@ TECHNOLOGIES
 - VMware Workstation
 - Windows Server 2025
 - Windows 11 Pro
-- Ubuntu Server
+- CentOS 10
 - Active Directory Domain Services
 - DNS
 - PowerShell
