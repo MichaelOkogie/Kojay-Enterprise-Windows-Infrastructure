@@ -46,16 +46,16 @@ PROJECT GOALS
 
 ## INITIAL ENVIRONMENT
 
-Company: Kojay Industries
-Active Directory Domain: corp.kojayindustries.test
-Initial Site: Calgary
-Network: 10.10.10.0/24
+- Company: Kojay Industries
+- Active Directory Domain: corp.kojayindustries.test
+- Initial Site: Calgary
+- Network: 10.10.10.0/24  
 
 Systems:
-KI-CORP-DC01 - Windows Server 2025, Initial Corporate Domain Controller / DNS
-KI-CGY-DC01 - Windows Server 2025, Calgary Site Domain Controller / DNS
-KI-CGY-LNX01 - CentOS 10, Linux Infrastructure Server
-KI-CGY-CL01 - Windows 11 Pro, Calgary Domain Workstation
+- KI-CORP-DC01 - Windows Server 2025, Initial Corporate Domain Controller / DNS
+- KI-CGY-DC01 - Windows Server 2025, Calgary Site Domain Controller / DNS
+- KI-CGY-LNX01 - CentOS 10, Linux Infrastructure Server
+- KI-CGY-CL01 - Windows 11 Pro, Calgary Domain Workstation
 
 
 ------------------------------------------------------------
